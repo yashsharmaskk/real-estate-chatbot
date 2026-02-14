@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const connectDB = require('./config/database');
+const { connectDB } = require('./config/database');
 
 // Import routes
 const chatRoutes = require('./routes/chat');
