@@ -1,0 +1,330 @@
+.comparison-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 2rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.comparison-modal {
+    background: white;
+    border-radius: 24px;
+    max-width: 1200px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.comparison-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1.5rem 2rem;
+    border-radius: 24px 24px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comparison-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.comparison-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.comparison-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.comparison-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+.comparison-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.comparison-content::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.comparison-content::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 4px;
+}
+
+.comparison-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 200px repeat(auto-fit, minmax(250px, 1fr));
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-row.header-row {
+    background: #f8f9fa;
+}
+
+.comparison-row.highlight-row {
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.comparison-label {
+    padding: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    background: #f8f9fa;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    font-size: 0.9375rem;
+}
+
+.comparison-cell {
+    padding: 1.25rem;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #666;
+    font-size: 0.9375rem;
+}
+
+.comparison-cell:last-child {
+    border-right: none;
+}
+
+.comparison-cell.property-cell {
+    position: relative;
+    padding: 0;
+    height: 200px;
+}
+
+.comparison-property-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.comparison-property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comparison-property-image .no-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.remove-property-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.remove-property-btn:hover {
+    background: #ff4444;
+    color: white;
+    transform: scale(1.1);
+}
+
+.comparison-cell.price-cell {
+    font-size: 1.25rem;
+    color: #667eea;
+}
+
+.amenities-row {
+    min-height: 150px;
+}
+
+.comparison-cell.amenities-cell {
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.amenities-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    text-align: left;
+}
+
+.amenity-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.amenity-item.has-amenity {
+    color: #4caf50;
+}
+
+.amenity-item.no-amenity {
+    color: #ccc;
+}
+
+.amenity-check {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.amenity-name {
+    flex: 1;
+}
+
+.comparison-footer {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.comparison-clear-btn {
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.comparison-clear-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 1024px) {
+    .comparison-row {
+        grid-template-columns: 150px repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .comparison-label {
+        font-size: 0.875rem;
+        padding: 1rem;
+    }
+
+    .comparison-cell {
+        font-size: 0.875rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .comparison-modal-overlay {
+        padding: 1rem;
+    }
+
+    .comparison-modal {
+        max-height: 95vh;
+    }
+
+    .comparison-header {
+        padding: 1rem;
+    }
+
+    .comparison-title {
+        font-size: 1.25rem;
+    }
+
+    .comparison-content {
+        padding: 1rem;
+    }
+
+    .comparison-row {
+        grid-template-columns: 120px 1fr;
+        font-size: 0.8125rem;
+    }
+
+    .comparison-cell.property-cell {
+        height: 150px;
+    }
+}

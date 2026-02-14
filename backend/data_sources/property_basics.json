@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "3 BHK Apartment in Downtown",
+        "price": 450000,
+        "location": "New York, NY"
+    },
+    {
+        "id": 2,
+        "title": "2 BHK Condo with Sea View",
+        "price": 380000,
+        "location": "Miami, FL"
+    },
+    {
+        "id": 3,
+        "title": "Luxury Villa with Private Garden",
+        "price": 850000,
+        "location": "Los Angeles, CA"
+    },
+    {
+        "id": 4,
+        "title": "1 BHK Budget Apartment",
+        "price": 250000,
+        "location": "Austin, TX"
+    },
+    {
+        "id": 5,
+        "title": "4 BHK Penthouse",
+        "price": 1200000,
+        "location": "New York, NY"
+    },
+    {
+        "id": 6,
+        "title": "2 BHK Modern Flat",
+        "price": 320000,
+        "location": "Chicago, IL"
+    },
+    {
+        "id": 7,
+        "title": "3 BHK Family Home",
+        "price": 550000,
+        "location": "Seattle, WA"
+    },
+    {
+        "id": 8,
+        "title": "Studio Apartment Downtown",
+        "price": 180000,
+        "location": "Portland, OR"
+    },
+    {
+        "id": 9,
+        "title": "5 BHK Luxury Estate",
+        "price": 2500000,
+        "location": "San Francisco, CA"
+    },
+    {
+        "id": 10,
+        "title": "2 BHK Cozy Cottage",
+        "price": 290000,
+        "location": "Denver, CO"
+    }
+]
