@@ -7,8 +7,8 @@ import CompareButton from './components/CompareButton';
 import ComparisonModal from './components/ComparisonModal';
 import SavedPropertiesView from './components/SavedPropertiesView';
 
-// Backend API URL - Railway production
-const API_BASE_URL = 'https://real-estate-chatbot-production-c289.up.railway.app/api';
+// Backend API URL - Render production
+const API_BASE_URL = 'https://real-estate-chatbot-8fdj.onrender.com/api';
 
 function App() {
     const [messages, setMessages] = useState([
